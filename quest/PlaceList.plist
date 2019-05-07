@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>placeID</key>
+		<string>DvtNVZHx</string>
+		<key>name</key>
+		<string>Заговор</string>
+		<key>mission</key>
+		<string>Найти 30 золотых</string>
+		<key>code</key>
+		<string>4209</string>
+		<key>nextLocale</key>
+		<dict>
+			<key>latitude</key>
+			<real>47.0445606</real>
+			<key>longitude</key>
+			<real>28.8609977</real>
+			<key>title</key>
+			<string>Тайная Вечеря</string>
+		</dict>
+	</dict>
+	<dict>
+		<key>placeID</key>
+		<string>9ZcjFP9g</string>
+		<key>name</key>
+		<string>Тайная Вечеря</string>
+		<key>mission</key>
+		<string>Разделите трапезу</string>
+		<key>code</key>
+		<string>1284</string>
+		<key>nextLocale</key>
+		<dict>
+			<key>latitude</key>
+			<real>47.038</real>
+			<key>longitude</key>
+			<real>28.8495</real>
+			<key>title</key>
+			<string>Ночь суда</string>
+		</dict>
+	</dict>
+</array>
+</plist>
