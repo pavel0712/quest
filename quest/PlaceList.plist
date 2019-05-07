@@ -2,6 +2,7 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <array>
+
 	<dict>
 		<key>placeID</key>
 		<string>DvtNVZHx</string>
@@ -10,7 +11,7 @@
 		<key>mission</key>
 		<string>Найти 30 золотых</string>
 		<key>code</key>
-		<string>4209</string>
+		<string>30</string>
 		<key>nextLocale</key>
 		<dict>
 			<key>latitude</key>
@@ -37,7 +38,121 @@
 			<key>longitude</key>
 			<real>28.8495</real>
 			<key>title</key>
+			<string>Гефсимания</string>
+		</dict>
+	</dict>
+	<dict>
+		<key>placeID</key>
+		<string>9ZcjFP9g</string>
+		<key>name</key>
+		<string>Гефсимания</string>
+		<key>mission</key>
+		<string>Посмотри ролик</string>
+		<key>code</key>
+		<string>1284</string>
+		<key>nextLocale</key>
+		<dict>
+			<key>latitude</key>
+			<real>47.0191</real>
+			<key>longitude</key>
+			<real>28.8402</real>
+			<key>title</key>
 			<string>Ночь суда</string>
+		</dict>
+	</dict>
+	<dict>
+		<key>placeID</key>
+		<string>9ZcjFP9g</string>
+		<key>name</key>
+		<string>Ночь суда</string>
+		<key>mission</key>
+		<string>Посмотри ролик</string>
+		<key>code</key>
+		<string>1284</string>
+		<key>nextLocale</key>
+		<dict>
+			<key>latitude</key>
+			<real>47.0168</real>
+			<key>longitude</key>
+			<real>28.8197</real>
+			<key>title</key>
+			<string>Иисус у Ирода</string>
+		</dict>
+	</dict>
+	<dict>
+		<key>placeID</key>
+		<string>9ZcjFP9g</string>
+		<key>name</key>
+		<string>Иисус у Ирода</string>
+		<key>mission</key>
+		<string>Посмотри ролик</string>
+		<key>code</key>
+		<string>1284</string>
+		<key>nextLocale</key>
+		<dict>
+			<key>latitude</key>
+			<real>47.0169</real>
+			<key>longitude</key>
+			<real>28.8194</real>
+			<key>title</key>
+			<string>Путь на Голгофу</string>
+		</dict>
+	</dict>
+	<dict>
+		<key>placeID</key>
+		<string>9ZcjFP9g</string>
+		<key>name</key>
+		<string>Путь на Голгофу</string>
+		<key>mission</key>
+		<string>Посмотри ролик</string>
+		<key>code</key>
+		<string>1284</string>
+		<key>nextLocale</key>
+		<dict>
+			<key>latitude</key>
+			<real>47.0159</real>
+			<key>longitude</key>
+			<real>28.8181</real>
+			<key>title</key>
+			<string>Голгофа</string>
+		</dict>
+	</dict>
+	<dict>
+		<key>placeID</key>
+		<string>9ZcjFP9g</string>
+		<key>name</key>
+		<string>Голгофа</string>
+		<key>mission</key>
+		<string>Посмотри ролик</string>
+		<key>code</key>
+		<string>1284</string>
+		<key>nextLocale</key>
+		<dict>
+			<key>latitude</key>
+			<real>47.0163</real>
+			<key>longitude</key>
+			<real>28.8140</real>
+			<key>title</key>
+			<string>Гробница</string>
+		</dict>
+	</dict>
+	<dict>
+		<key>placeID</key>
+		<string>9ZcjFP9g</string>
+		<key>name</key>
+		<string>Гробница</string>
+		<key>mission</key>
+		<string>Посмотри ролик</string>
+		<key>code</key>
+		<string>1284</string>
+		<key>nextLocale</key>
+		<dict>
+			<key>latitude</key>
+			<real>47.0163</real>
+			<key>longitude</key>
+			<real>28.8140</real>
+			<key>title</key>
+			<string>Гора Елеонская</string>
 		</dict>
 	</dict>
 </array>
