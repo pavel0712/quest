@@ -18,7 +18,7 @@
 		33FBE7A1228045B1009E346B /* Place.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33FBE7A0228045B1009E346B /* Place.swift */; };
 		33FBE7A322804780009E346B /* DBManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33FBE7A222804780009E346B /* DBManager.swift */; };
 		33FBE7A52280506D009E346B /* PlaceList.plist in Resources */ = {isa = PBXBuildFile; fileRef = 33FBE7A42280506D009E346B /* PlaceList.plist */; };
-		33FBE7A72281672D009E346B /* DvtNVZHx.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 33FBE7A62281672D009E346B /* DvtNVZHx.mp4 */; };
+		33FBE7A72281672D009E346B /* 9ZcjFP9g.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 33FBE7A62281672D009E346B /* 9ZcjFP9g.mp4 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,7 +35,7 @@
 		33FBE7A0228045B1009E346B /* Place.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Place.swift; sourceTree = "<group>"; };
 		33FBE7A222804780009E346B /* DBManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DBManager.swift; sourceTree = "<group>"; };
 		33FBE7A42280506D009E346B /* PlaceList.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = PlaceList.plist; sourceTree = "<group>"; };
-		33FBE7A62281672D009E346B /* DvtNVZHx.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = DvtNVZHx.mp4; sourceTree = "<group>"; };
+		33FBE7A62281672D009E346B /* 9ZcjFP9g.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = 9ZcjFP9g.mp4; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,7 +88,7 @@
 		33FBE79B227BB709009E346B /* video */ = {
 			isa = PBXGroup;
 			children = (
-				33FBE7A62281672D009E346B /* DvtNVZHx.mp4 */,
+				33FBE7A62281672D009E346B /* 9ZcjFP9g.mp4 */,
 			);
 			path = video;
 			sourceTree = "<group>";
@@ -151,7 +151,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				33FBE7A72281672D009E346B /* DvtNVZHx.mp4 in Resources */,
+				33FBE7A72281672D009E346B /* 9ZcjFP9g.mp4 in Resources */,
 				33FBE782227B2C57009E346B /* LaunchScreen.storyboard in Resources */,
 				33FBE7A52280506D009E346B /* PlaceList.plist in Resources */,
 				33FBE77F227B2C57009E346B /* Assets.xcassets in Resources */,
