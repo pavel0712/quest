@@ -24,9 +24,10 @@ class QRScannerController: UIViewController, AVCaptureMetadataOutputObjectsDeleg
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         messageLabel.setTitle("Наведи на QR code", for:.normal )
-
+        messageLabel.layer.cornerRadius = 20;
+        messageLabel.clipsToBounds = true;
         // Get an instance of the AVCaptureDevice class to initialize a device object and provide the video
         // as the media type parameter.
         guard let captureDevice = AVCaptureDevice.default(for: AVMediaType.video) else {
@@ -118,7 +119,7 @@ class QRScannerController: UIViewController, AVCaptureMetadataOutputObjectsDeleg
             qrCodeFrameView?.frame = barCodeObject!.bounds
             guard var QRCode = metadataObj.stringValue else { return }
             if DBManager.sharedInstance.existsPlaceWithID(placeID:QRCode as NSString) {
-                messageLabel.setTitle("Нажми чтоб продолжить", for:.normal )
+                messageLabel.setTitle("Нажми чтобы продолжить", for:.normal )
                 self.QRCodeID = metadataObj.stringValue
                 return
             }

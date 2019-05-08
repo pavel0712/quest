@@ -20,11 +20,12 @@
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="UxG-Cu-8qV">
                                 <rect key="frame" x="10" y="626" width="394" height="100"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="backgroundColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="100" id="hdi-me-nTo"/>
                                 </constraints>
-                                <state key="normal" title="Наведи на код" backgroundImage="papyrus">
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="30"/>
+                                <state key="normal" title="Наведи на код">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
@@ -53,7 +54,7 @@
         <scene sceneID="A2r-ui-uRQ">
             <objects>
                 <viewController id="a8c-Uv-wb8" customClass="PlayerViewController" customModule="quest" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="1Wy-P9-nfH">
+                    <view key="view" autoresizesSubviews="NO" contentMode="scaleToFill" id="1Wy-P9-nfH">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -73,9 +74,13 @@
                                     <outlet property="delegate" destination="a8c-Uv-wb8" id="Bpw-fN-EC7"/>
                                 </connections>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3DI-fa-5yc">
-                                <rect key="frame" x="153" y="326.33333333333331" width="108" height="30"/>
-                                <state key="normal" title="Проверить код"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3DI-fa-5yc">
+                                <rect key="frame" x="112" y="326.33333333333331" width="190" height="46"/>
+                                <color key="backgroundColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                                <state key="normal" title="Проверить код">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
                                 <connections>
                                     <action selector="checkCode:" destination="a8c-Uv-wb8" eventType="touchUpInside" id="8Qp-yZ-95B"/>
                                 </connections>
