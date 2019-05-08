@@ -9,7 +9,7 @@
 import UIKit
 import MapKit
 
-class MapViewController: UIViewController {
+class MapViewController: UIViewController, MKMapViewDelegate {
 
     @IBOutlet weak var mapView: MKMapView!
     override func viewDidLoad() {
@@ -31,6 +31,7 @@ class MapViewController: UIViewController {
         annotation.subtitle = place.nextSubtitle
         mapView.addAnnotation(annotation)
 
+        self.mapView.delegate = self
         // Do any additional setup after loading the view.
     }
     
@@ -48,4 +49,8 @@ class MapViewController: UIViewController {
     }
     */
 
+    func mapView(_ mapView: MKMapView, didUpdate userLocation: MKUserLocation) {
+        let region = MKCoordinateRegion(center: userLocation.coordinate, latitudinalMeters: 800, longitudinalMeters: 800);
+        mapView.setRegion(mapView.regionThatFits(region), animated: true);
+    }
 }
