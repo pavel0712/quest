@@ -17,11 +17,7 @@ class PlayerViewController: UIViewController, UITextFieldDelegate, AVPlayerViewC
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        guard let place = DBManager.sharedInstance.selectedPlace else {
-            return
-        }
-        missionLabel.text = place.mission as String
-        // Do any additional setup after loading the view.
+        missionLabel.text = DBManager.sharedInstance.selectedPlace?.mission
     }
 
     @IBAction func playVideoFile(_ sender: Any) {
@@ -34,14 +30,14 @@ class PlayerViewController: UIViewController, UITextFieldDelegate, AVPlayerViewC
 
             let playerController = AVPlayerViewController()
             playerController.player = player
-//            playerController.showsPlaybackControls = false
+            playerController.showsPlaybackControls = false
             present(playerController, animated: true) {
                 player.play()
             }
-//            NotificationCenter.default.addObserver(self,
-//                                                   selector: Selector(("playerDidFinishPlaying:")),
-//                                                   name: NSNotification.Name.AVPlayerItemDidPlayToEndTime,
-//                                                   object: player.currentItem)
+            NotificationCenter.default.addObserver(self,
+                                                   selector: #selector(playerDidFinishPlaying),
+                                                   name: .AVPlayerItemDidPlayToEndTime,
+                                                   object: player.currentItem)
         }
     }
 
@@ -66,8 +62,8 @@ class PlayerViewController: UIViewController, UITextFieldDelegate, AVPlayerViewC
     }
 
     func wrongCode() {
-        let alert = UIAlertController.init(title: "Too Bad",
-                                           message: "Inchearca inca odata!",
+        let alert = UIAlertController.init(title: "Too Bad ;(",
+                                           message: "Incearca inca odata!",
                                            preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { action in
             switch action.style {
@@ -82,11 +78,7 @@ class PlayerViewController: UIViewController, UITextFieldDelegate, AVPlayerViewC
         self.present(alert, animated: true, completion: nil)
     }
 
-    public func playerDidFinishPlaying(note: NSNotification) {
-        print("playerDidFinishPlaying 1")
-        print(note.userInfo)
-        print("playerDidFinishPlaying 2")
-//        self.navigationController?.popViewController(animated: true)
-        print("playerDidFinishPlaying 3")
+    @objc func playerDidFinishPlaying(note: NSNotification) {
+        dismiss(animated: true)
     }
 }

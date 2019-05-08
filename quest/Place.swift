@@ -9,25 +9,25 @@
 import UIKit
 import MapKit
 
-class Place: NSObject {
-    var placeID: String = ""
-    var name: String = ""
-    var mission: String = ""
-    var code: String = ""
-    var nextSubtitle: String = ""
-    var nextTitle: String = ""
-    var location: CLLocationCoordinate2D = kCLLocationCoordinate2DInvalid
+struct Place {
+    let placeID: String
+    let name: String
+    let mission: String
+    let code: String
+    let nextSubtitle: String
+    let nextTitle: String
+    let location: CLLocationCoordinate2D
 
-    init(data : Dictionary<String, Any>) {
+    init(data: [String: Any]) {
         placeID = data["placeID"] as! String
-        name = data["placeID"] as! String
-        mission = data["mission"] as! String
+        name = data["name"] as? String ?? ""
+        mission = data["mission"] as? String ?? ""
         code = data["code"] as! String
-        let nextLocation = data["nextLocale"] as! Dictionary<String, Any>
+        let nextLocation = data["nextLocale"] as! [String: Any]
         let latitude = nextLocation["latitude"] as! Double
         let longitude = nextLocation["longitude"] as! Double
         location = CLLocationCoordinate2D(latitude: latitude, longitude: longitude)
-        nextTitle = nextLocation["title"] as! String
-        nextSubtitle = nextLocation["subtitle"] as! String
+        nextTitle = nextLocation["title"] as? String ?? ""
+        nextSubtitle = nextLocation["subtitle"] as? String ?? ""
     }
 }
