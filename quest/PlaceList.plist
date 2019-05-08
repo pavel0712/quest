@@ -19,6 +19,8 @@
 			<real>28.8609977</real>
 			<key>title</key>
 			<string>Тайная Вечеря</string>
+			<key>subtitle</key>
+			<string>Пункт 2</string>
 		</dict>
 	</dict>
 	<dict>
@@ -38,6 +40,8 @@
 			<real>28.8495</real>
 			<key>title</key>
 			<string>Ночь суда</string>
+			<key>subtitle</key>
+			<string>Пункт 3</string>
 		</dict>
 	</dict>
 </array>

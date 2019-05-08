@@ -10,7 +10,7 @@ import UIKit
 import AVKit
 import AVFoundation
 
-class PlayerViewController: UIViewController {
+class PlayerViewController: UIViewController, UITextFieldDelegate {
 
     @IBOutlet weak var codeField: UITextField!
     @IBOutlet weak var missionLabel: UILabel!
@@ -49,14 +49,32 @@ class PlayerViewController: UIViewController {
             return
         }
 
-
-        if place.code.isEqual(to:input) {
+        if place.code.contains(input) {
             performSegue(withIdentifier: "showMap", sender: nil)
+        } else {
+            wrongCode()
         }
     }
 
-    func textFieldShouldReturn(textField: UITextField) -> Bool {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         self.view.endEditing(true)
         return true
+    }
+
+    func wrongCode() {
+        let alert = UIAlertController.init(title: "Too Bad",
+                                           message: "Inchearca inca odata!",
+                                           preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { action in
+            switch action.style {
+            case .default:
+                print("default")
+            case .cancel:
+                print("cancel")
+            case .destructive:
+                print("destructive")
+            }
+        }))
+        self.present(alert, animated: true, completion: nil)
     }
 }

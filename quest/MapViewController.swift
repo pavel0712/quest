@@ -16,17 +16,19 @@ class MapViewController: UIViewController {
         super.viewDidLoad()
         self.navigationItem.setHidesBackButton(true, animated:false)
 
-        let location = CLLocationCoordinate2D(latitude: 47.0168933,
-                                              longitude: 28.8188964)
+        guard let place = DBManager.sharedInstance.selectedPlace else {
+            return
+        }
+
         let span = MKCoordinateSpan(latitudeDelta: 0.01, longitudeDelta: 0.01)
 
-        let region = MKCoordinateRegion(center: location, span: span)
+        let region = MKCoordinateRegion(center: place.location, span: span)
         mapView.setRegion(region, animated: true)
 
         let annotation = MKPointAnnotation()
-        annotation.coordinate = location
-        annotation.title = "Big Ben"
-        annotation.subtitle = "London"
+        annotation.coordinate = place.location
+        annotation.title = place.nextTitle
+        annotation.subtitle = place.nextSubtitle
         mapView.addAnnotation(annotation)
 
         // Do any additional setup after loading the view.

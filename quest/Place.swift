@@ -10,23 +10,24 @@ import UIKit
 import MapKit
 
 class Place: NSObject {
-    var placeID: NSString = ""
-    var name: NSString = ""
-    var mission: NSString = ""
-    var code: NSString = ""
-
-    var nextTitle: NSString = ""
+    var placeID: String = ""
+    var name: String = ""
+    var mission: String = ""
+    var code: String = ""
+    var nextSubtitle: String = ""
+    var nextTitle: String = ""
     var location: CLLocationCoordinate2D = kCLLocationCoordinate2DInvalid
 
-    init(data : NSDictionary) {
-        placeID = data["placeID"] as! NSString
-        name = data["placeID"] as! NSString
-        mission = data["mission"] as! NSString
-        code = data["code"] as! NSString
-        let nextLocation = data["nextLocale"] as! NSDictionary
+    init(data : Dictionary<String, Any>) {
+        placeID = data["placeID"] as! String
+        name = data["placeID"] as! String
+        mission = data["mission"] as! String
+        code = data["code"] as! String
+        let nextLocation = data["nextLocale"] as! Dictionary<String, Any>
         let latitude = nextLocation["latitude"] as! Double
         let longitude = nextLocation["longitude"] as! Double
-
         location = CLLocationCoordinate2D(latitude: latitude, longitude: longitude)
+        nextTitle = nextLocation["title"] as! String
+        nextSubtitle = nextLocation["subtitle"] as! String
     }
 }

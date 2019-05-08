@@ -22,12 +22,10 @@ class DBManager: NSObject {
         if let path = Bundle.main.path(forResource: "PlaceList", ofType: "plist") {
             guard let arrayRoot = NSArray(contentsOfFile: path) else { return false}
             for dict in arrayRoot {
-                let data = dict as! NSDictionary
-                guard let dataID = data["placeID"] as? NSString else {
+                let data = dict as! Dictionary<String, Any>
+                guard let dataID = data["placeID"] as? String else {
                     return false
                 }
-                print(placeID)
-                print(dataID)
                 if placeID.contains(dataID as String) {
                     selectedPlace = Place(data: data)
                     return true
