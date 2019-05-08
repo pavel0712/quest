@@ -10,7 +10,7 @@ import UIKit
 import AVKit
 import AVFoundation
 
-class PlayerViewController: UIViewController, UITextFieldDelegate {
+class PlayerViewController: UIViewController, UITextFieldDelegate, AVPlayerViewControllerDelegate {
 
     @IBOutlet weak var codeField: UITextField!
     @IBOutlet weak var missionLabel: UILabel!
@@ -30,14 +30,18 @@ class PlayerViewController: UIViewController, UITextFieldDelegate {
         }
         print(place.placeID)
         if let path = Bundle.main.path(forResource: place.placeID as String, ofType:"mp4") {
-            print("playVideoFile true")
             let player = AVPlayer(url: URL(fileURLWithPath: path))
+
             let playerController = AVPlayerViewController()
             playerController.player = player
-            playerController.showsPlaybackControls = false
+//            playerController.showsPlaybackControls = false
             present(playerController, animated: true) {
                 player.play()
             }
+//            NotificationCenter.default.addObserver(self,
+//                                                   selector: Selector(("playerDidFinishPlaying:")),
+//                                                   name: NSNotification.Name.AVPlayerItemDidPlayToEndTime,
+//                                                   object: player.currentItem)
         }
     }
 
@@ -76,5 +80,13 @@ class PlayerViewController: UIViewController, UITextFieldDelegate {
             }
         }))
         self.present(alert, animated: true, completion: nil)
+    }
+
+    public func playerDidFinishPlaying(note: NSNotification) {
+        print("playerDidFinishPlaying 1")
+        print(note.userInfo)
+        print("playerDidFinishPlaying 2")
+//        self.navigationController?.popViewController(animated: true)
+        print("playerDidFinishPlaying 3")
     }
 }
